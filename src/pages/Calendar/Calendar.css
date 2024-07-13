@@ -1,0 +1,56 @@
+.calendar-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 70px;
+    margin: 0 5px;
+    background-color: white;
+    color: white;
+    cursor: pointer;
+    transition: width 0.3s ease;
+    height: 80%;
+    background-image: repeating-linear-gradient(180deg,
+            rgba(0, 0, 0, 0.1) 0px,
+            rgba(0, 0, 0, 0.1) 1px,
+            transparent 1px,
+            transparent 3px);
+}
+
+
+
+.card.selected {
+    width: 300px;
+    background-image: none;
+}
+
+.card-title {
+    font-size: 20px;
+    color: white
+}
+
+.flex.overflow-auto {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.card2 {
+    flex: 0 0 auto; /* This prevents the cards from shrinking */
+    width: 370px; /* Set a fixed width for the cards */
+    height: auto; /* Set height to auto or a specific value */
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.1) 0px,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    margin: 0 5px; /* Consistent with .card */
+    /* Additional styles... */
+}

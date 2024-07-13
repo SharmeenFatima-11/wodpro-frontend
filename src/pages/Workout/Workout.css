@@ -1,0 +1,6 @@
+ul.custom-bullets li {
+    list-style-type: disc; /* Default bullet style, can be changed to circle, square, none, etc. */
+    color: black; /* Changes the color of the bullet */
+    /* For custom images as bullets */
+    /* list-style-image: url('path_to_image'); */
+}
