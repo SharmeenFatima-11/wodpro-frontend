@@ -63,7 +63,7 @@ const Payment = () => {
 
                 if (!data?.userObj?.teamFound && !data.userObj.individual) {
                     let uuid = uuidv4();
-                    const teamRef = doc(db, "Teams", uuid);
+                    const teamRef = doc(db, "test_Teams", uuid);
                     let myteamobj = { ...data?.teamObj, teamCreatorId: response.user.uid, teamId: uuid };
                     const teamCreation = await setDoc(teamRef, myteamobj);
                     console.log("team cration response is : ", teamCreation);
@@ -76,11 +76,11 @@ const Payment = () => {
                 }
 
 
-                const docRef = doc(db, "users", response.user.uid);
+                const docRef = doc(db, "test_users", response.user.uid);
                 const result = await setDoc(docRef, firestoreUserObj);
 
                 if (data.userObj.coupenFlag) {
-                    const coupenref = collection(db, `coupons/${data?.userObj?.coupen}/users/`);
+                    const coupenref = collection(db, `coupons/${data?.userObj?.coupen}/test_users/`);
                     await addDoc(coupenref, { timestamp: Date.now(), userId: response.user.uid });
                 }
                 setLoading(false);
@@ -143,7 +143,7 @@ const Payment = () => {
                     teammateEmails: data.userObj.teammateEmails
                 }
 
-                const docRef = doc(db, "users", response.user.uid);
+                const docRef = doc(db, "test_users", response.user.uid);
                 const result = await setDoc(docRef, firestoreUserObj);
 
                 setLoading(false);

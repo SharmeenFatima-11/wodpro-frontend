@@ -55,8 +55,8 @@ export default function CheckoutForm({clientSecret}) {
         const { error } = await stripe.confirmPayment({
             elements,
             confirmParams: {
-                // return_url: "https://wod-pro-leaugue.vercel.app/payment",
-                return_url: "http://localhost:5173/payment",
+                return_url: "https://effervescent-beignet-af79c4.netlify.app/payment",
+                // return_url: "http://localhost:5173/payment",
             },
         });
 
