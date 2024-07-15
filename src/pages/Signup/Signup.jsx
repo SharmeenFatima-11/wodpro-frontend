@@ -838,10 +838,10 @@ const Signup = () => {
                     {val == 'Genero' && <option className="text-black" value="">
                     Genero
                   </option>}
-                  {val == 'Male' && <option className="text-black" value="male">
+                  {val == 'Male' && <option className="text-black" value="Masculino">
                     Másculino
                   </option>}
-                  {val == 'Female' && <option className="text-black" value="female">
+                  {val == 'Female' && <option className="text-black" value="Feminino">
                     Femenino
                   </option>}
                   </>
