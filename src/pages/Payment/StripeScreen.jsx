@@ -67,7 +67,7 @@ export default function StripeScreen() {
     // };
 
     const getStripeClientScecret = async (price) => {
-        const response = await axios.post("http://13.53.123.99/api/v1/payments/intent", { amount: price }, {
+        const response = await axios.post("https://backend.wodproleague.es/api/v1/payments/intent", { amount: price }, {
             headers: {
                 "Content-Type": "application/json"
             }
